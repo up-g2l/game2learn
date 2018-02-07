@@ -39,7 +39,7 @@
         <servlet-class>g2l.servlets.G2LEmail</servlet-class>
         <init-param>
             <param-name>fromEmail</param-name>
-            <param-value>sendtoupendra@yahoo.com</param-value>
+            <param-value>BBBBBBBBBB@yahoo.com</param-value>
         </init-param>
         <init-param>
             <param-name>host</param-name>
