@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<root>
+    <difficulty>
+        <diff_level id='1'>Very Easy</diff_level>
+        <diff_level id='2'>Easy</diff_level>
+        <diff_level id='3'>Somewhat Difficult</diff_level>
+        <diff_level id='4'>Difficult</diff_level>
+        <diff_level id='5'>Very Difficult</diff_level>
+        <diff_level id='6'>Extreme</diff_level>
+    </difficulty>
+    <class_grade>
+        <grade id='11'>Primary School</grade>
+        <grade id='12'>Secondary School</grade>
+        <grade id='13'>High School</grade>
+        <grade id='14'>Undergraduate</grade>
+        <grade id='15'>Graduate</grade>
+        <grade id='16'>Advanced</grade>
+    </class_grade>
+    <subjects>
+        <subject>
+            <sub_name>Mathematics</sub_name>
+            <sub_id>MA</sub_id>
+            <sub_area>
+                <sub_area_name>Algebra</sub_area_name>
+                <sub_area_id>AL</sub_area_id>         
+            </sub_area> 
+            <sub_area>
+                <sub_area_name>General Math</sub_area_name>
+                <sub_area_id>GM</sub_area_id>         
+            </sub_area> 
+            <sub_area>
+                <sub_area_name>Differential Calculus</sub_area_name>
+                <sub_area_id>C1</sub_area_id>         
+            </sub_area> 
+            <sub_area>
+                <sub_area_name>Integral Calculus</sub_area_name>
+                <sub_area_id>C2</sub_area_id>         
+            </sub_area> 
+            <sub_area>
+                <sub_area_name>Multivariable Calculus</sub_area_name>
+                <sub_area_id>C3</sub_area_id>         
+            </sub_area> 
+            <sub_area>
+                <sub_area_name>Advanced Calculus</sub_area_name>
+                <sub_area_id>C4</sub_area_id>         
+            </sub_area> 
+            <sub_area>
+                <sub_area_name>Vectors Calculus</sub_area_name>
+                <sub_area_id>VC</sub_area_id>         
+            </sub_area> 
+            <sub_area>
+                <sub_area_name>Differential Equations</sub_area_name>
+                <sub_area_id>DE</sub_area_id>         
+            </sub_area> 
+            <sub_area>
+                <sub_area_name>Complex Variables</sub_area_name>
+                <sub_area_id>CV</sub_area_id>         
+            </sub_area> 
+            <sub_area>
+                <sub_area_name>Real Analysis</sub_area_name>
+                <sub_area_id>RA</sub_area_id>         
+            </sub_area> 
+            <sub_area>
+                <sub_area_name>Functional Analysis</sub_area_name>
+                <sub_area_id>FA</sub_area_id>         
+            </sub_area> 
+            <sub_area>
+                <sub_area_name>Numerical Analysis</sub_area_name>
+                <sub_area_id>NA</sub_area_id>         
+            </sub_area> 
+        </subject>
+        <subject>
+            <sub_name>English</sub_name>
+            <sub_id>EN</sub_id>
+            <sub_area>
+                <sub_area_name>SAT </sub_area_name>
+                <sub_area_id>ST</sub_area_id>         
+            </sub_area> 
+            <sub_area>
+                <sub_area_name>GRE </sub_area_name>
+                <sub_area_id>GR
+                </sub_area_id>         
+            </sub_area> 
+            <sub_area>
+                <sub_area_name>Grammar </sub_area_name>
+                <sub_area_id>GM
+                </sub_area_id>         
+            </sub_area> 
+        </subject>
+        <subject>
+            <sub_name>Physics</sub_name>
+            <sub_id>PH</sub_id>
+            <sub_area>
+                <sub_area_name>General Mechanics</sub_area_name>
+                <sub_area_id>GM</sub_area_id>         
+            </sub_area> 
+            <sub_area>
+                <sub_area_name>Rotational Dynamics</sub_area_name>
+                <sub_area_id>RD</sub_area_id>         
+            </sub_area>
+            <sub_area>
+                <sub_area_name>Heat </sub_area_name>
+                <sub_area_id>HT</sub_area_id>         
+            </sub_area>
+            <sub_area>
+                <sub_area_name>Electricity</sub_area_name>
+                <sub_area_id>EL</sub_area_id>         
+            </sub_area>
+            <sub_area>
+                <sub_area_name>Magnetism</sub_area_name>
+                <sub_area_id>MT</sub_area_id>         
+            </sub_area>
+            <sub_area>
+                <sub_area_name>Optics</sub_area_name>
+                <sub_area_id>LT</sub_area_id>         
+            </sub_area>
+            <sub_area>
+                <sub_area_name>Quantom Mechanics</sub_area_name>
+                <sub_area_id>QM</sub_area_id>         
+            </sub_area>
+            <sub_area>
+                <sub_area_name>Wave Motion</sub_area_name>
+                <sub_area_id>WM</sub_area_id>         
+            </sub_area>
+            <sub_area>
+                <sub_area_name>Relativity Theory</sub_area_name>
+                <sub_area_id>RT</sub_area_id>         
+            </sub_area>
+        
+        </subject>
+        <subject>
+            <sub_name>Chemistry</sub_name>
+            <sub_id>CH</sub_id>
+            <sub_area>
+                <sub_area_name>General Chemistry</sub_area_name>
+                <sub_area_id>GC</sub_area_id>  
+            </sub_area>
+            <sub_area>
+                <sub_area_name>Organic Chemistry</sub_area_name>
+                <sub_area_id>OC</sub_area_id>  
+            </sub_area>   
+            <sub_area> 
+                <sub_area_name>Inorganic Chemistry</sub_area_name>
+                <sub_area_id>IC</sub_area_id>
+            </sub_area>   
+            <sub_area>  
+                <sub_area_name>Physical Chemistry</sub_area_name>
+                <sub_area_id>PC</sub_area_id>    
+            </sub_area> 
+        </subject>
+        <subject>
+            <sub_name>Biology</sub_name>
+            <sub_id>BI</sub_id>
+            <sub_area>
+                <sub_area_name>General Biology</sub_area_name>
+                <sub_area_id>GB</sub_area_id>
+            </sub_area>  
+            <sub_area>
+                <sub_area_name>Health Biology</sub_area_name>
+                <sub_area_id>HB</sub_area_id>
+            </sub_area>  
+            <sub_area>
+                <sub_area_name>Botany</sub_area_name>
+                <sub_area_id>BT</sub_area_id>
+            </sub_area>    
+            <sub_area>    
+                <sub_area_name>Zoology</sub_area_name>
+                <sub_area_id>ZL</sub_area_id> 
+            </sub_area>
+            <sub_area>
+                <sub_area_name>Ecology</sub_area_name>
+                <sub_area_id>EC</sub_area_id> 
+            </sub_area>
+            <sub_area>
+                <sub_area_name>Cellular Biology</sub_area_name>
+                <sub_area_id>CB</sub_area_id>
+            </sub_area>
+            <sub_area>
+                <sub_area_name>Epidemiology</sub_area_name>
+                <sub_area_id>EP</sub_area_id>
+            </sub_area>
+            <sub_area>
+                <sub_area_name>Neuroscience</sub_area_name>
+                <sub_area_id>NS</sub_area_id>         
+            </sub_area> 
+        </subject>
+    </subjects>
+</root>

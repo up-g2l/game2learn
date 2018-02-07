@@ -1,0 +1,25 @@
+/* 
+    Document   : q_entry
+    Created on : Aug 1, 2014, 2:06:03 PM
+    Author     : upendraprasad
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+label{display: inline-block; text-align: left;}
+#qEntryMsg{position: absolute; width: 100%; top: 0px; left: 0px;z-index: 15;padding: 2px;
+           text-align: center; display: none; background-image: url(/g2l/images/greenBG5.jpeg);
+           font:bold 14px/18px sans-serif;color: #777777;}
+.qNum{display: inline-block; width: 30px; background-color: green;margin: 1px;margin-bottom: 0px;
+      color: blue; padding: 2px;text-align: center;font-size: 12px;}
+.qNum:hover{ background-color: #E3E3DE; cursor: pointer;color:red;}
+#popDivImgUpload,#popDivImgUpload2,#popDivQEdit{position: absolute; display: none;                                                             
+                                                border: 1px green solid;  z-index: 11;padding: 2px;}
+
+#question{    height:80px;    width:400px;    border:1px solid; border-color:green; }
+.imgThumbUploaded{height: 50px;max-width: 200px;cursor: pointer;border: 2px solid #AAAAAA;}
+.imgThumbUploaded:hover{border: 2px solid green;}

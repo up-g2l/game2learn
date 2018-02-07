@@ -1,0 +1,271 @@
+/* 
+    Document   : gameStyle
+    Created on : Jan 20, 2013, 5:17:31 PM
+    Author     : upendraprasad
+    Description:
+        Purpose of the stylesheet follows.
+*/
+body{
+   border-color:#000070;margin: 0px;
+}
+
+a.miniLink:hover{
+    cursor: pointer;
+    font: bold 12px/20px sans-serif;
+    color: white;
+    background-color: green;
+}
+
+a.miniLink{
+    cursor: pointer;
+    font: bold 12px/20px sans-serif;
+    color: green;
+    background-color: inherit;
+    border: 1px;
+    height:25px;
+}
+
+root { 
+    display: block;
+}
+#bannerGame2Learn{
+    text-align: center; padding:5px;background-color:rgb(18,52,86);color:#FFFFFF;vertical-align:middle;
+}
+
+#gameMenuBar{
+    font-size: 12px;font-weight: bold;
+    text-align: right; padding:2px;background-color: #222222;color:white;vertical-align:middle;
+}
+select{
+    font-weight: bold;
+    height:25px;
+    width:100px;
+    border:1px solid; border-color:#000055;
+}
+.radio1{
+    font:10px;
+    font-weight: bold;
+    height:20px;
+    width:150px;
+    border:1px solid; border-color:#000055;
+}
+input.ip1{ 
+    font:14px bold;
+    height:25px;
+    width:280px;
+    border:1px solid; border-color:#000055;
+}
+input.ip2{ 
+    font:14px bold;
+    height:25px;
+    width:100px;
+    border:1px solid; border-color:#000055;
+}
+
+.btnMacro1{
+    font-size:14px;
+    font-weight: bold;
+    width:40px;
+    border:1px solid;
+}
+#btnAddTag{
+    font:16px bold;
+    width:30px;
+    color: blue;
+    background-color: #BBBBBB;
+}
+
+#btnAddTag:hover{
+    font: 16px bold;
+    width:30px;
+    color: white;
+    background-color: green;
+}
+
+.macroBtn:hover{
+    font: 11px bold;
+    width:40px;
+    color:green;
+}
+.btnMain{
+     background-color: #BBBBBB;
+     color:green;
+    font-size:11px;
+    font-weight: bold;
+    height:30px;
+    width:150px;
+ /*   border-bottom: 3px solid; border-right:3px solid; 
+    border-color:#000055;border-radius: 10px;*/
+}
+.btnMain:hover{
+    background-color: green;
+    color:white;
+    font-size:11px;    
+    font-weight: bold;
+    height:30px;
+    width:150px;
+   /* border-bottom: 2px solid; border-right:2px solid; 
+     border-radius: 10px;*/
+}
+
+#editQ{
+     background-color: #BBBBBB;
+     color:green;
+    font-size:11px;
+    font-weight: bold;
+    height:30px;
+    width:50px;
+ /*   border-bottom: 3px solid; border-right:3px solid; 
+    border-color:#000055;border-radius: 10px;*/
+}
+ #editQ:hover{
+    background-color: green;
+    color:white;
+    font-size:11px;    
+    font-weight: bold;
+    height:30px;
+    width:50px;
+   /* border-bottom: 2px solid; border-right:2px solid; 
+     border-radius: 10px;*/
+}
+textarea{
+     font-weight: bold;
+    height:60px;
+    width:280px;
+    border:1px solid; border-color:#000055;
+    border-bottom: 2px solid; border-right:1px solid; 
+}
+div.coverToGrayOut{ /*This is not working*/
+    width: 100%;height:100%;
+         background-color: #EEEEEE; 
+         position: absolute; 
+         left: 0px; 
+         top: 0px;
+         opacity:0.75;
+         z-index: 9;
+}
+
+#coverToGrayOut { width: 100%;height:100%;
+         background-color: #EEEEEE; 
+         position: absolute; 
+         left: 0px; 
+         top: 0px;
+         opacity:0.75;
+         z-index: 9;
+}
+
+
+.qInsBox{   
+    padding: 5px;
+    text-align: left;
+    color: yellow;  
+      font-size:14px;
+      width: 100%;       
+        opacity:0.90; 
+        border:2px; border-color:#FFFF11; 
+        text-align:left; vertical-align: top; 	
+        -moz-border-radius: 10px;-webkit-border-radius: 10px;
+        -khtml-border-radius: 10px;  border-radius: 10px; border-width: 1px;
+}
+.qEntryTbl{ background-color:#E3E3DE; 
+    border-color: #000070;
+    border:1px solid;
+    color: #222222;    
+      font-size: 14px ;
+      font-weight: bold;
+      padding: 5px;
+      text-align: left;
+      -moz-border-radius: 10px;-webkit-border-radius: 10px;
+        -khtml-border-radius: 10px;  border-radius: 10px;
+      
+}
+
+.qTbl2{
+      color: #222222;    
+      font: bold 12px sans-serif;
+      width: 500px;
+      padding-left: 10px;      
+      border:1px #666666;
+   
+}
+
+.qBox2{ 
+      color: red;  
+      font:10px bold  Palatino, serif;
+      width: 250px;
+        height: 200px; 
+        visibility:hidden; 
+        position:absolute;
+        z-index:2;opacity:0.90; 
+        border:2px; border-color:#000000; background:url(./images/bgTD.jpeg);
+        text-align:left; vertical-align: top; 	-moz-border-radius: 10px;-webkit-border-radius: 10px;
+        -khtml-border-radius: 10px;  border-radius: 10px; border-width: 1px;
+   }
+    
+.qBox{ 
+       color:#FFFFFF;
+      font: 10px bold  Palatino, serif;
+      width: 250px;
+        height: 200px; 
+        visibility:hidden; 
+        position:absolute;
+        z-index:2;opacity:0.90; 
+        border:2px; border-color:#000000; background: #333333;
+        text-align:left; vertical-align: top; 	-moz-border-radius: 10px;-webkit-border-radius: 10px;
+        -khtml-border-radius: 10px;  border-radius: 10px; border-width: 1px;
+   }
+ .accoContent{ 
+       color:#444444;
+      font: 14px bold  Palatino, sans-serif; 
+        height:140px;
+        border:2px; border-color:#000000; background: #CCCCCC;
+       border-radius: 10px; border-width: 1px;
+   }  
+     
+td.menu{ 
+    background:url(./images/button.gif); 
+      height:30px; 
+      background-color: rgb(10,10,10);
+      font-family: Arial;  
+      font-size: 12px;  
+      color: #FFFFFF;  
+      text-decoration: none;   
+      font-weight: bold;   
+      text-align: center; 
+      cursor: pointer;
+}
+.GameTD0{ text-align:center; vertical-align: middle; background-color: #ffffff;border: 1px thick red dashed; width: 160px; height: 90px;}
+.GameTD1{ text-align:center; vertical-align: middle; background-color: rgb(0,0,100); border:thick red dashed 1px; width: 160px; height: 90px;}
+.GameTD2{ text-align:center; vertical-align: middle; background-color: rgb(0,100,100); border: thick red dashed 1px; width: 160px; height: 90px;  }
+.GameTD3{ text-align:center; vertical-align: middle; background-color: rgb(0,100,0); border: thick red dashed 1px; width: 160px; height: 90px;  }
+.GameTD4{  font:"Bookman Old Style";  text-align:center; vertical-align: middle; background-color: rgb(100,100,0); border: thick red dashed 1px; width: 160px; height: 90px;  }
+.GameTD5{ text-align:center; vertical-align: middle; background-color: rgb(100,0,0); border: thick red dashed 1px; width: 160px; height: 90px;  }
+	
+div.panel,div.flip
+{
+padding:5px;
+text-align:left;
+vertical-align: top;
+background-color:#e5eecc;
+border:solid 1px #c3c3c3;
+}
+div.panel
+{
+padding:10px;
+display:none;
+}
+
+.infoBoxOuterDiv{
+  		visibility: hidden;z-index: -5; position:absolute;width: 400px;height: 200px; padding:10px;
+  		background-color: #CCCCCC; border:1px #444444 solid ;
+  	}
+          	#instructionBox{
+  		 position:absolute;top:0;left:0; width: 440px;height: 300px; padding:10px;
+                 font:12px red bold ;color: #444444;
+  		background-color: #DDDDDD; border:1px #444444 solid ;
+  	}
+  	
+  	 	.coverDiv{
+  		visibility: visible; position: absolute;top:0;left:0; background-color: #AAAAAA;opacity: 0.75;z-index: -2;
+  	}
+  	

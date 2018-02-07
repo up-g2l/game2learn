@@ -1,0 +1,183 @@
+/* 
+    Document   : common
+    Created on : Jun 29, 2014, 2:02:54 PM
+    Author     : upendraprasad
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+@viewport {
+    width: device-width;
+    zoom: 1;
+}
+
+#newUserSignUp{width: 95%; margin:auto;height: auto;background-color: #EEEEEE;
+                   border-radius: 10px;padding: 20px;
+                   box-shadow: 0px 1px 6px 3px #DDDDDD;vertical-align: middle;}
+
+    #loginBox{width: 90%;display: inline-block;}
+    #g2lLogo{margin-left: 20px; width: 40%; }
+    .signup{ width: 80%;height: 40px;font-size: 24px; border:green 1px solid; color: #888888; }
+    
+  /* Small viewport and (min-resolution:100dpi)
+@media only screen and (max-width: 600px) { 
+    #newUserSignUp{width: 90%; margin:auto;height: auto;background-color: #EEEEEE;
+                   border-radius: 10px;padding: 20px;
+                   box-shadow: 0px 1px 6px 3px #DDDDDD;vertical-align: middle;}
+
+    #loginBox{width: 50%;display: inline-block;}
+    #g2lLogo{margin-left: 20px; width: 40%; display: inline-block; }
+    .signup{ width: 60%;height: 40px;font-size: 24px; border:green 1px solid; color: #888888; }
+}
+
+
+
+
+@media only screen and (min-width: 640px) { 
+    #newUserSignUp{width: 60%; margin:auto;height: auto;background-color: #EEEEEE;
+                   border-radius: 10px;padding: 20px;
+                   box-shadow: 0px 1px 6px 3px #DDDDDD;vertical-align: middle;}
+
+    #loginBox{width: 50%;display: inline-block;}
+    #g2lLogo{margin-left: 20px; width: 40%; display: inline-block; }
+    .signup{ width: 80%;height: 40px;font-size: 24px; border:green 1px solid; color: #888888; }
+}
+ 
+
+
+@media only screen and (min-width: 640px) { 
+    #newUserSignUp{width: 60%; margin:auto;height: auto;background-color: #EEBBEE;
+                   border-radius: 10px;padding: 20px;
+                   box-shadow: 0px 1px 6px 3px #DDDDDD;vertical-align: middle;}
+
+    #loginBox{width: 80%;display: inline-block;}
+    #g2lLogo{margin-left: 20px; width: 40%; display: inline-block; }
+    .signup{ width: 50%;height: 40px;font-size: 24px; border:green 1px solid; color: #888888; }
+}*/
+
+@media only screen and  (min-width: 600px) {
+
+    #g2lLogo{margin-left: 20px; width: 80%; display: inline-block; }
+    #loginBox{width: 90%;display: inline-block;}
+    #loginBox input{ width: 30%;height: 1.5em;font-size: 2em; border:green 1px solid; color: #888888; padding: 5px}
+    #loginBox img{ height: 60px; }
+    #newUserSignUp{width: 90%;color:#FFFFFF;margin:auto;height: auto;background-color: forestgreen;
+                   border-radius: 10px; padding: 20px;
+                   box-shadow: 0px 1px 6px 3px #DDDDDD;vertical-align: middle;}
+    #imgSignup{ height:100px;}
+    .signup{ width: 90%;height: 100px;font-size: 30px; border:green 1px solid; color: #888888; padding: 5px}
+}
+
+
+
+@media only screen and (min-width: 1080px){
+
+    #g2lLogo{margin-left: 20px; width: 30%; display: inline-block; }
+    #loginBox{width: 60%;}
+
+    #newUserSignUp{width: 60%;color:#FFFFFF;margin:auto;height: auto;background-color: pink;
+                   border-radius: 10px;padding: 20px;
+                   box-shadow: 0px 1px 6px 3px #DDDDDD;vertical-align: middle;}
+    #imgSignup{ height:40px;}
+    .signup{ width: 80%;height: 40px;font-size: 24px; border:green 1px solid; color: #888888; }
+}
+
+@media only screen and (min-width: 1400px)  {
+
+    #g2lLogo{margin-left: 20px; width: 30%; display: inline-block; }
+    #loginBox{width: 60%;}
+
+    #newUserSignUp{width: 60%;color:#FFFFFF;margin:auto;height: auto;background-color: tomato;
+                   border-radius: 10px;padding: 20px;
+                   box-shadow: 0px 1px 6px 3px #DDDDDD;vertical-align: middle;}
+    #imgSignup{ height:40px;margin-top:5px;}
+    .signup{ width: 40%;height: 40px;font-size: 24px; border:green 1px solid; color: #888888; }
+}
+
+@media only screen and (min-width: 1800px){
+
+    #g2lLogo{margin-left: 20px; width: 30%; display: inline-block; }
+    #loginBox{width: 60%;}
+
+    #newUserSignUp{width: 90%;color:#FFFFFF;margin:auto;height: auto;background-color: #BDEFCF;
+                   border-radius: 10px;padding: 20px;
+                   box-shadow: 0px 1px 6px 3px #DDDDDD;vertical-align: middle;}
+    #imgSignup{ height:40px;margin-top:5px;}
+    .signup{ width: 40%;height: 2em;font-size: 40px; border:green 1px solid; color: #888888;padding: 0.5em; }
+}
+
+
+
+
+
+
+root { 
+    display: block;
+}
+
+body { margin: 0;
+    font: 600 18px/30px "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", Sans-Serif;
+}
+
+body,p,h1,h2,h3,h4,table,td,th,ul,ol,textarea,input,div,a{ 
+    font-family:arial,sans-serif;
+    word-spacing: 150%;text-spacing:ideograph-alpha;letter-spacing: 200%;
+}
+a,a:link,a:visited,a:active{ text-decoration: none;  cursor:  pointer; color: #555555; }
+
+label{font-size: 12px; font-weight: bold; color: #555555; min-width: 100px;display: inline-block;  height:25px;     }
+
+hr{ height: 1px;}
+
+h1 {font-size:230%;margin-top:0px;font-weight:normal}
+h2 {font-size:200%;margin-top:10px;margin-bottom:10px;font-weight:normal}
+h3 {font-size:180%;font-weight:normal; }
+h4 {font-size:140%;}
+h5 {font-size:120%;}
+h6 {font-size:100%;}
+
+input,textarea,select{ border:1px solid #666666;  border-radius: 5px; padding-left: 5px; height:30px; margin: 5px; box-shadow:0 0 2px #444444;}
+
+/*
+body{
+    margin: 0px;
+    font-size: 14px;
+    color:#555555;
+    background-image: url(/g2l/images/FibSpiral11.jpeg);
+    background-size: cover;background-repeat: repeat-x;
+    background-position: center; 
+}*/
+input[type=button],.btnMain{
+    color: #444444; font-size: 10px;   height:25px;padding: 3px;  background-color: #61A220;
+    padding-left: 10px; padding-right: 10px;
+}
+input[type=button]:hover, .btnMain:hover{  background-color:#009933;}
+
+input[type=file]{    color: #888888; font-size: 15px;   height:20px;padding: 4px;   }
+
+input[type=radio]{width: 40px; height: 30px;vertical-align: middle;}
+
+
+input[type=checkbox] {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    margin: auto;
+    background: #fcfff4;
+    border: 2px solid #777777;
+    color: green;
+}
+input[type=checkbox]:hover{background-color: green;}
+
+.imgClosePop{position: absolute; top: 1px; right: 1px;width: 24px;cursor: pointer;}
+.imgClosePop:hover{box-shadow: 0 0 6px whitesmoke;}
+
+
+#divPopContainer,.divPopContainer{background-color:#99EE77;position: fixed;display:none;z-index: 20;
+                                  margin: auto;    left: 0;top:0;right: 0;bottom: 0;width: 820px;
+                                  border:8px solid #EEEEEE; border-radius:5px;
+                                  box-shadow:  0px 0px 4px 1px  #999999;}
+#popHeader{padding:5px; margin:0; background-color:#008800;color:#DDDDDD; padding-left: 6px;font-size: 14px;font-weight: bold;}
+#qEntryMsg{position: absolute; width: 100%; top: 0px; left: 0px;z-index: 15;padding: 2px;
+           text-align: center; display: none; background-image: url(images/greenBG5.jpeg);
+           font:bold 14px/18px sans-serif;color: #777777;}

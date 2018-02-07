@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="bootstrap336full/docs/favicon.ico">
+
+    <title>BayaCasa: Choose with confidence</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap336full/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="bootstrap336full/docs/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="bootstrap336full/docs/assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom styles for this template -->
+    <link href="css/carousel.css" rel="stylesheet">
+    <link href="css/signin.css" rel="stylesheet">
+
+    <style type="text/css">
+    .text-center{    	
+    	padding: 1px; 
+
+    }
+    .for-pad{
+    	/*background-color: #EFEFEF; */      	
+    	padding: 10px;
+    	margin-left:1px;    
+    	margin-top:1px; 	
+    	z-index: inherit;
+    }
+    .for-pad:hover{
+    	background-color: white;   
+    	box-shadow: 2px 2px 2px 1px #888888 ;	
+    	border: 0px solid #BBBBBB;
+    	z-index: 20;
+    }
+
+    .for-zip{
+    	background-color: white;      
+      text-align: left;
+    	height: 150px; 	
+    	padding: 20px;
+    	margin-left:1px;    
+    	margin-top:1px; 	
+    	}
+
+    .img-circle{
+    	border:1px solid #888888;
+    	background-color: #0099CC;
+    	padding: 2px;
+    }
+    .img-circle:hover{
+    	background-color: white;
+    }
+
+    .zip-container{
+    	width: 100%; 
+    	z-index: 5;
+    	position: relative; 
+    	margin-top: 50px;
+    	background-color: #999999;
+
+      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#c9de96+0,8ab66b+44,398235+100;Green+3D+%233 */
+          background: #c9de96; /* Old browsers */
+          background: -moz-radial-gradient(center, ellipse cover,  #c9de96 0%, #8ab66b 44%, #398235 100%); /* FF3.6-15 */
+          background: -webkit-radial-gradient(center, ellipse cover,  #c9de96 0%,#8ab66b 44%,#398235 100%); /* Chrome10-25,Safari5.1-6 */
+          background: radial-gradient(ellipse at center,  #c9de96 0%,#8ab66b 44%,#398235 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c9de96', endColorstr='#398235',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+    }
+    .baya-rank{
+    	background-image: url(images/Baya.gif); background-size:cover; height: 60px; width: 60px; font-size: 20px;text-align: center; vertical-align: middle;padding: 20px;
+    }
+    .brank{
+    	font-size: 30px;font-weight: bold; font-family: ariel; color: #333333;margin-left: -5px; margin-top: 20px; rgba(255,255,255,0.2); width: 40px; 
+    }
+
+    #slide-box{
+        position: relative; top: 0; height: 10px; width: 100%; z-index: -1; 
+    }
+    .pref-slider{
+      position: absolute; left:-5px;
+      height: 100%;
+      display: none;
+      z-index: 15; background-color: #CCCCCC;
+      
+    }
+    .option-slider{
+      position: absolute; right:-5px;
+      height: 100%; 
+      display: none;
+      z-index: 15; background-color: #CCCCCC;
+     
+    }
+    </style>
+  </head>
+
+
+  <body>
+
+
+
+
+
+
+  <!-- NAVBAR
+================================================== -->
+    <div class="navbar-wrapper">
+      <div class="container">
+
+        <nav class="navbar navbar-default navbar-fixed-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#"><img style="max-height:80px; margin-top: -15px;" src="images/Baya.gif "></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+              <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Mortgage <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Get Pre-approved</a></li>
+                    <li><a href="#">Mortgage Rates</a></li>
+                    <li><a href="#">Mortgage Calculator</a></li>
+                    <li role="separator" class="divider"></li>                    
+                    <li><a href="#">Housing I can afford</a></li>
+                    <li><a href="#">Refinance Calculator</a></li>
+                    <li><a href="#">Cost of Living Calculator</a></li>
+                    <li><a href="#">Mortgage Guide</a></li>
+                  </ul>
+                </li>                     
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Services <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Realtors</a></li>
+                    <li><a href="#">Real Estate Attorney</a></li>
+                    <li><a href="#">Home Inspector</a></li>                  
+                    <li><a href="#">Bayacasa Handhold</a></li>
+                    <li><a href="#">Collaborate</a></li>
+                  </ul>
+                </li>
+                <li><a href="https://www.nerdwallet.com/blog/insurance/find-homeowners-insurance/" target="_blank">Insurance</a></li>
+                <li><a href="#contact">Contact Baya</a></li>
+              </ul>
+              <ul class="nav navbar-nav  navbar-right">
+                <li><a data-toggle="modal" data-target="#signinModal">Sign-in</a></li>
+                <li><a data-toggle="modal" data-target="#signupModal">Sign-up</a></li>             
+                 <!--<li>
+                   <form class="form-inline" style="margin: 8px;">
+                      <input class="form-control" type="text" placeholder="Search">
+                      <button class="btn btn-success-outline" type="submit">Search</button>
+                    </form>
+                  </li>-->
+              </ul>
+            </div>
+          </div>   
+          </nav>
+      </div>
+    </div>
+
+     
+
+
+
+
+
+
+
+
+
+
+    <!-- Carousel
+    ================================================== 
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators --
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">            
+          <img class="first-slide" src="images/bg/water-drops-bluewall.jpg" alt="First slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Smart Housing for Smart Living</h1>
+              <p>Housing matters as better living  matters.</p>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img class="second-slide" src="images/bg/water-drops-redwall.jpg" alt="Second slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Choose with confidence</h1>.
+              <p>Online analytical tools to help you make the right decision</p>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img class="third-slide" src="images/bg/water-drops-greenwall.jpg" alt="Third slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Hassle-free Finance</h1>
+              <p>Informed discussion made easier by Baya.</p>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">Get help</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div> --><!-- /.carousel -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- GRID FOR ZIPCODE DETAILS
+========================== -->
+<div class="container zip-container">
+<div class="row">
+<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="vertical-align: middle;">
+    <a id="slide-clicker" class="btn btn-primary" href="#" style="max-height: inherit;vertical-align: middle;"> ||</a>
+</div>
+	<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+  <!-- Sliders -->  
+   
+     <div class="pref-slider col-lg-6 col-md-6 col-sm-6 col-xs-12"></div>
+     <div class="option-slider col-lg-6 col-md-6 col-sm-6 col-xs-12"></div>
+   
+		<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
+      <div class="for-zip">
+  			<div class="baya-rank"> <span class="brank">1</span></div>
+  		    <h5>City State-08824</h5>
+  		</div>
+    </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
+      <div class="for-zip">
+        <div class="baya-rank"> <span class="brank">2</span></div>
+          <h5>City State-08824</h5>
+      </div>
+    </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
+      <div class="for-zip">
+        <div class="baya-rank"> <span class="brank">3</span></div>
+          <h5>City State-08824</h5>
+      </div>
+    </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
+      <div class="for-zip">
+        <div class="baya-rank"> <span class="brank">4</span></div>
+          <h5>City State-08824</h5>
+      </div>
+    </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
+      <div class="for-zip">
+        <div class="baya-rank"> <span class="brank">5</span></div>
+          <h5>City State-08824</h5>
+      </div>
+    </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
+      <div class="for-zip">
+        <div class="baya-rank"> <span class="brank">6</span></div>
+          <h5>City State-08824</h5>
+      </div>
+    </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
+      <div class="for-zip">
+        <div class="baya-rank"> <span class="brank">7</span></div>
+          <h5>City State-08824</h5>
+      </div>
+    </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
+      <div class="for-zip">
+        <div class="baya-rank"> <span class="brank">8</span></div>
+          <h5>City State-08824</h5>
+      </div>
+    </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
+      <div class="for-zip">
+        <div class="baya-rank"> <span class="brank">9</span></div>
+          <h5>City State-08824</h5>
+      </div>
+    </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
+      <div class="for-zip">
+        <div class="baya-rank"> <span class="brank">10</span></div>
+          <h5>City State-08824</h5>
+      </div>
+    </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
+      <div class="for-zip">
+        <div class="baya-rank"> <span class="brank">11</span></div>
+          <h5>City State-08824</h5>
+      </div>
+    </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
+      <div class="for-zip">
+        <div class="baya-rank"> <span class="brank">12</span></div>
+          <h5>City State-08824</h5>
+      </div>
+    </div>
+
+		</div>
+  <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+    Options
+  </div>
+  </div>
+</div><br><br>
+
+
+
+
+
+
+     <!-- Modal for sign-in -->
+  <div class="modal fade" id="signinModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Smart Learn Single Sign-in</h4>
+        </div>
+        <div class="modal-body">
+           <form class="form-signin" id="form-signin">
+              <h3 class="form-signin-heading">Please sign in</h3>
+              <label for="inputEmail" class="sr-only">Email address</label>
+              <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+              <label for="inputPassword" class="sr-only">Password</label>
+              <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" value="remember-me"> Remember me
+                </label>
+              </div>
+              <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- Modal for sign-up -->
+  <div class="modal fade" id="signupModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Smart Learn Signup</h4>
+        </div>
+        <div class="modal-body">
+           <form class="form-signin" id="form-signup">
+              <h3 class="form-signup-heading">Please provide the following</h3>
+              <label for="inputEmail" class="sr-only">Email address</label>
+              <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+              <label for="inputPassword" class="sr-only">Password</label>
+              <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+              <label for="reinputPassword" class="sr-only">Password</label>
+              <input type="password" id="reinputPassword" class="form-control" placeholder="Re-enter Password" required>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" value="remember-me"> Remember me
+                </label>
+              </div>
+              <button class="btn btn-lg btn-primary btn-block" type="submit">Sign up</button>
+      </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+<!-- Marketplace
+========================== -->
+<div class="container">
+	<div class="row">
+		<div class="col-md-2 col-sm-4 col-xs-6 text-center"><div class="for-pad">
+			<a> 
+				<img class="img-square" src="icons/bullseye.png" alt="Generic placeholder image" width="50" height="50">
+			</a>
+		    <h5>Bay-Estimate</h5>
+		</div></div>
+		<div class="col-md-2 col-sm-4 col-xs-6 text-center"><div class="for-pad">
+			<a> 
+				<img class="img-square" src="icons/wallet.png" alt="Generic placeholder image" width="50" height="50">
+			</a>
+		    <h5>Save</h5>
+		</div></div>
+		<div class="col-md-2 col-sm-4 col-xs-6 text-center"><div class="for-pad">
+			<a> 
+				<img class="img-square" src="icons/money_idea.png" alt="Generic placeholder image" width="50" height="50">
+			</a>
+		    <h5>Make Money</h5>
+		</div></div>
+		<div class="col-md-2 col-sm-4 col-xs-6 text-center"><div class="for-pad">
+			<a> 
+				<img class="img-square" src="icons/handshake.png" alt="Generic placeholder image" width="50" height="50">
+			</a>
+		    <h5>Find Realtors/h5>
+		</div></div>
+		<div class="col-md-2 col-sm-4 col-xs-6 text-center"><div class="for-pad">
+			<a> 
+				<img class="img-square" src="icons/bank.png" alt="Generic placeholder image" width="50" height="50">
+			</a>
+		    <h5>Finance Options</h5>
+		</div></div>
+		<div class="col-md-2 col-sm-4 col-xs-6 text-center"><div class="for-pad">
+			<a> 
+				<img class="img-square" src="icons/ccards.png" alt="Generic placeholder image" width="50" height="50">
+			</a>
+		    <h5>Credit Cards</h5>
+		</div></div>
+
+	</div>
+	<div class="row">
+		<div class="col-md-2 col-sm-4 col-xs-6 text-center"><div class="for-pad">
+			<a> 
+				<img class="img-square" src="icons/ccards.png" alt="Generic placeholder image" width="50" height="50">
+			</a>
+		    <h5>Credit Score</h5>
+		</div></div>
+		<div class="col-md-2 col-sm-4 col-xs-6 text-center"><div class="for-pad">
+			<a> 
+				<img class="img-square" src="icons/barchart.png" alt="Generic placeholder image" width="50" height="50">
+			</a>
+		    <h5>Price History</h5>
+		</div></div>
+		<div class="col-md-2 col-sm-4 col-xs-6 text-center"><div class="for-pad">
+			<a> 
+				<img class="img-square" src="icons/ideas.png" alt="Generic placeholder image" width="50" height="50">
+			</a>
+		    <h5>Real Estate Investment</h5>
+		</div></div>
+		<div class="col-md-2 col-sm-4 col-xs-6 text-center"><div class="for-pad">
+			<a> 
+				<img class="img-square" src="icons/calculator.png" alt="Generic placeholder image" width="50" height="50">
+			</a>
+		    <h5>Mortgage Calculator</h5>
+		</div></div>
+		<div class="col-md-2 col-sm-4 col-xs-6 text-center"><div class="for-pad">
+			<a> 
+				<img class="img-square" src="icons/graph.png" alt="Generic placeholder image" width="50" height="50">
+			</a>
+		    <h5>Median Prices</h5>
+		</div></div>
+		<div class="col-md-2 col-sm-4 col-xs-6 text-center"><div class="for-pad">
+			<a> 
+				<img class="img-square" src="icons/notes.png" alt="Generic placeholder image" width="50" height="50">
+			</a>
+		    <h5>Your Notes</h5>
+		</div></div>
+
+	</div>
+</div>
+<br><br><hr><br>
+
+
+
+
+
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container">
+
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="col-md-3 col-sm-6 col-xs-12 text-center"><div class="for-pad">
+          <img class="img-circle" src="icons/teddy1.png" alt="Generic placeholder image" width="100" height="100">
+          <h4>BayaCasa Story</h4>
+          <p>The journey to make house-hunt a delight</p>
+          <p><a class="btn btn-primary" href="#" role="button">Watch &raquo;</a></p>
+        </div></div><!-- /.col-lg-4 -->
+        <div class="col-md-3 col-sm-6 col-xs-12 text-center"><div class="for-pad">
+          <img class="img-circle" src="icons/cuty1.png" alt="Generic placeholder image" width="100" height="100">
+          <h4>Whitepapers</h4>
+          <p>Get educated on housing and properties.</p>
+          <p><a class="btn btn-primary" href="#" role="button">Infographics &raquo;</a></p>
+        </div></div><!-- /.col-lg-4 -->
+        <div class="col-md-3 col-sm-6 col-xs-12 text-center"><div class="for-pad">
+          <img class="img-circle" src="icons/bunny1.png" alt="Generic placeholder image" width="100" height="100">
+          <h4> Before buying</h4>
+          <p>A practical guide before you even start.</p>
+          <p><a class="btn btn-primary" href="#" role="button">Watch &raquo;</a></p>
+        </div></div><!-- /.col-lg-4 -->
+        <div class="col-md-3 col-sm-6 col-xs-12 text-center"><div class="for-pad">
+          <img class="img-circle" src="icons/monkey1.png" alt="Generic placeholder image" width="100" height="100">
+          <h4> Before selling</h4>
+          <p>A practical guide before you even think.</p>
+          <p><a class="btn btn-primary" href="#" role="button">Watch &raquo;</a></p>
+        </div></div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+      </div><!-- /.container -->
+
+
+ 
+
+
+      <!-- FOOTER -->
+      <br><hr>
+      <div class="container">
+<footer class="footer-distributed">
+
+  <div class="footer-left">
+
+    <h3>Baya<span>Casa</span></h3>
+
+    <p class="footer-links">
+      <a href="#">Home</a>
+      ·
+      <a href="#">Blog</a>
+      ·
+      <a href="#">Pricing</a>
+      ·
+      <a href="#">About</a>
+      ·
+      <a href="#">Faq</a>
+      ·
+      <a href="#">Contact</a>
+    </p>
+
+    <p class="footer-company-name">BayaCasa &copy; 2016</p>
+  </div>
+
+  <div class="footer-center">
+    <div>
+      <i class="fa fa-map-marker"></i>
+      <p><span>12 Golden Gate</span> San Francisco, CA</p>
+    </div>
+    <div>
+      <i class="fa fa-phone"></i>
+      <p>+1 234 567 8910</p>
+    </div>
+    <div>
+      <i class="fa fa-envelope"></i>
+      <p><a href="mailto:support@company.com">support@bayacasa.com</a></p>
+    </div>
+  </div>
+
+  <div class="footer-right">
+    <p class="footer-company-about">
+      <span>About the company</span>
+      Happiness equals reality minus expectations.
+    </p>
+    <div class="footer-icons">
+      <a href="#"><i class="fa fa-facebook"></i></a>
+      <a href="#"><i class="fa fa-twitter"></i></a>
+      <a href="#"><i class="fa fa-linkedin"></i></a>
+      <a href="#"><i class="fa fa-github"></i></a>
+    </div>
+
+  </div>
+
+</footer>
+      </div>
+
+    
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="bootstrap336full/docs/assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="bootstrap336full/dist/js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="bootstrap336full/docs/assets/js/vendor/holder.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="bootstrap336full/docs/assets/js/ie10-viewport-bug-workaround.js"></script>
+    <!--<script type="text/javascript">
+    	$(document).ready(function(){
+    		$(".for-pad").hover(function(){
+        		  $(this).css("background-color", "white");
+        		}, function(){
+        			 $(this).css("background-color", "#EFEFEF");
+    				}
+    			);
+		});
+    </script>-->
+    <script>
+  $(document).ready(function() {
+
+    $("#slide-clicker").click(function(){
+      $(".pref-slider").toggle("slide");
+      $(".option-slider").toggle("slide");
+    });
+  });
+  </script>
+  </body>
+</html>
+

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--<link rel="icon" href="../../favicon.ico">-->
+
+    <!-- Bootstrap core CSS -->
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug --
+    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">-->
+
+    <!-- Custom styles for this template --
+    <link href="starter-template.css" rel="stylesheet">-->
+        <title>G2L: Gateway</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet"  type="text/css" href="../css/g2l_spring.css">
+        <link rel="stylesheet"  type="text/css" href="../css/common.css">
+        <link href="../css/g2l_boot.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+        
+    <!--<nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Game2Learn</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse --
+      </div>
+    </nav>-->
+        <!--<div style="display: none;" id="divMenuHider">
+            <jsp:include page="gameMenuBar.jsp" />
+        </div>    -->
+
+        <div class="container" style="margin:auto;float:none;"> 
+            <div id="divMsg" style="display: none;" onclick="$(this).hide();"></div>
+            <!-- Test Title Bar-->
+            <div style="font-weight: bold;color: white;background-color: #666666;border-radius: 0.2em;margin-top: 2em;height: 2.7em;padding: 0.2em"> 
+                <span id="numOfCorr" class="badge">Correct: 0/0</span><span id="numOfQ" style="display:inline-block; width: 2em;"> () </span>
+                   <!-- <button type="button" class="btn btn-success" onclick="submitTest()" id="btnSubmitTest" style="float:right;">Submit</button>
+                        <img id="imgPracIns" src="../icons/info.png" style="width: 40px;" />-->
+                  <button type="button" class="btn btn-info btn-sm"  style="float: left; margin-right: 1em">
+                      <span class="glyphicon glyphicon-info-sign" id="imgPracIns" style="font-size:1.4em;cursor: pointer;"></span>
+                  </button>                   
+                    <button type="button" class="btn btn-success btn-sm"  onclick="$('#imgBox').toggle('slow');" style="float: right; margin-left: 1em">
+                             <span class="glyphicon glyphicon-picture" style="font-size:1.4em;cursor: pointer;"></span>
+                    </button>
+                    <button type="button" class="btn btn-success btn-sm"  onclick="submitTest()"  style="float: right; margin-left: 1em">
+                         <span class="glyphicon glyphicon-floppy-save"  style="font-size:1.4em;cursor: pointer;"></span>
+                    </button>
+                    <button type="button" class="btn btn-success btn-sm"  onclick="window.location='index.html'"  style="float: right; margin-left: 1em; ">
+                       <span class="glyphicon glyphicon-home"  style="font-size:1.4em;cursor: pointer;"></span>
+                   </button> 
+                <div style="position:relative;top:2em;right:1em;" >		
+                    <div id="insMessage" onclick="$(this).hide();" class="alert alert-danger" role="alert">
+                        <p class="triangle-border top" id="pIns">I am your assistant. I provide suggestions when you need them.
+                        </p>
+                    </div>
+                </div>              
+                               
+            </div>    
+            <!-- End Test Title Bar-->
+            <div style="border-top: 0px solid #666666;border-bottom: 2px solid #666666;margin-top: -0.0em;padding:2vmin;postion:relative;width: 100%; height: 100%;">      
+                                 <!--Instructions -->
+                                <div  id="divPracIns"> 
+                                    <h5>Instructions</h5>
+                                    <ul>
+                                        <!--<li><img src="../icons/menu3.jpeg" style="width:30px;margin-bottom: -10px;"/>: Menu symbol  on the left can be used to show/hide the menu.</li>
+                                        --><li> The <span class="glyphicon glyphicon-info-sign" style=" font-size:1.5em;"></span> button could be used to show/hide the instructions. </li>
+                                        <li><span style="font-weight: bold;">Figures</span> can be hidden/shown by clicking on the <span class="glyphicon glyphicon-picture" style="font-size:1.5em;"></span> icon. </li>
+                                        <li>You can register an answer by clicking on the radio button.</li>
+                                        <li>Correct answer is then displayed with green border and wrong answer with red.</li>
+                                        <li>You <span style="font-weight: bold;">can not change</span> the answer once it has been registered.</li>
+                                        <li>You can use the buttons on the left and right to move to adjacent questions.</li>
+                                         <li>Submit the test by clicking on the icon <span class="glyphicon glyphicon-floppy-save"  style="width: 10vmin;font-size:1.5em;"></span>.</li>
+                                          <li>Take a SCREEN-SHOT if there is failure in saving the test data.</li>
+                                        <!--<li>Question with a <span style="font-weight: bold;">checkmark</span> show more frequently on memory-plus practice.</li>
+                                        <li>Do not forget to press <span style="font-weight: bold;">Save Data</span> for your practice. This is useful in the memory-plus practice.</li>-->
+                                    </ul>
+                                        <a class="btn btn-primary"  style="margin:auto;float:none;" onclick="$('#divPracIns').slideToggle('slow');$('#divPracQBox').slideToggle('slow');">Start or Resume</a>
+                                </div><!--Instructions End -->
+                <form name="qListForm">
+             <!-- Question Box -->                              
+             <div class="row" id="divPracQBox" style="float: bottom;">
+                        <div class="col-md-6 col-xs-12">
+                            <div style="width: 100%;">
+                               <p id="previewQText">Q.</p>
+                               
+                                <!--<div class="qFigBox">                         
+                                    <!--<img src="/g2l/uploadedImages/0.jpg" class="thumbQFig" id="imgQFig"/>--
+                                    <span class="glyphicon glyphicon-picture" style="float:right;font-size:2em;cursor: pointer;" onclick="$('#imgBox').toggle('slow');"></span>
+                                  </div>        -->   
+                                    
+                            </div> 
+                            <hr style="height:1vmin">
+                        </div>
+                        <!-- Answers-->
+                        <div class="col-md-6 col-xs-12">  
+                            <div style=" position:absolute; z-index: 2;float: top; width:100%;height:100%;background-color: #FFFFFF; " id="imgBox">                               
+                                <img src="/g2l/uploadedImages/0.jpg" style=" display:block; max-height: 100%; max-width: 90%; float: top; margin:auto; " id="imgQFig" alt="Question Figure" onclick="$('#imgBox').hide('slow');"/>
+                            </div> 
+                            <div class="col-md-10 col-xs-12"  id="divAnsBox" style="margin:auto; float:none;">                                           
+                                        <input type="radio" name="radQAns" value="A" /><span class="spanAns1">(A)&nbsp;</span><hr style="margin:0.3em">
+                                        <input type="radio" name="radQAns" value="B" /><span class="spanAns1">(B)&nbsp;</span><hr style="margin:0.3em">
+                                        <input type="radio" name="radQAns" value="C" /><span class="spanAns1">(C)&nbsp;</span><hr style="margin:0.3em">
+                                        <input type="radio" name="radQAns" value="D" /><span class="spanAns1">(D)&nbsp;</span><hr style="margin:0.3em">
+                                        <input type="radio" name="radQAns" value="E" /><span class="spanAns1">(E)&nbsp;</span><hr style="margin:0.3em">                                 
+                                    </div>
+                                
+                                <!--<a id="aBtnSaveAns" class="miniLink" > Show/hide Answer</a></div>-->
+                        </div>  <!-- Answer End-->
+                        <!--<div class="col-xs-12">
+                            <img  src="../icons/leftArrow.png" id="btnPrev"  onclick="loadQ(-1)" />                                            
+                                <img  src="../icons/rightArrow.png" id="btnNext"  onclick="loadQ(1);" />
+                        </div>        -->       
+                        <div class="col-xs-12">
+                           <span class="glyphicon glyphicon-circle-arrow-left" style="float:left;font-size:3em;cursor: pointer;" onclick="loadQ(-1)"></span>                                       
+                            <span class="glyphicon glyphicon-circle-arrow-right" style="float:right;font-size:3em;cursor: pointer;" onclick="loadQ(1)"></span>
+                        </div>
+                    </div><!-- Question Box ends-->
+                </form>
+            </div> 
+        </div>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+        <script  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>       
+        <script type="text/javascript" src="../js/mcTest2.js" ></script>
+        <script type="text/javascript" src="../js/jsUtil.js" ></script>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({tex2jax: {  inlineMath: [['$','$'], ['\\(','\\)']],
+            displayMath: [['\\[','\\]'], ['$$','$$']]},
+            styles: {".MathJax": { color: "#0000AA"}}
+            });
+        </script>
+        <script>
+           // var qString = '${pageContext.request.queryString}';
+          // var qString = "activity=testTake&testId=1043";
+          var testId = getParameterByName('testId');
+          var qString = "activity=testTake&testId="+testId;
+            console.log("Query String: "+qString);
+            
+            window.addEventListener("beforeunload", function (e) {
+                var confirmationMessage = 'It looks like you have been editing something. '
+                                        + 'If you leave before saving, your changes will be lost.';
+
+                (e || window.event).returnValue = confirmationMessage; //Gecko + IE
+                return confirmationMessage; //Gecko + Webkit, Safari, Chrome etc.
+            });
+
+    function getParameterByName(name, url) {
+        if (!url) url = window.location.href;
+        name = name.replace(/[\[\]]/g, "\\$&");
+        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+            results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
+    }
+        </script>
+   <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+        </body>
+</html>

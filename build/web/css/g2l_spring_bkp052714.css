@@ -1,0 +1,511 @@
+/* 
+    Document   : gameStyle
+    Created on : Jan 20, 2013, 5:17:31 PM
+    Author     : upendraprasad
+    Description:
+        Purpose of the stylesheet follows.
+
+background-image:-webkit-linear-gradient(top, #2F2727, #1a82f7);
+Some green Colors: #8AC007, #61A220, #009933
+*/
+
+
+root { 
+    display: block;
+}
+
+body,p,h1,h2,h3,h4,table,td,th,ul,ol,textarea,input,div,a{ 
+    font-family:verdana,helvetica,arial,sans-serif;
+    word-spacing: 150%;text-spacing:ideograph-alpha;letter-spacing: 200%;
+}
+
+hr{ height: 1px;}
+
+html{overflow-y:auto; overflow-style: panner;}
+
+
+body{
+        border-color:#000070;margin: 0px;
+        font-size: 14px;background-color: rgba(0,0,0,0.4);
+        color:#555555;
+        background-color:#EEEEEE;   
+        background-image: url(../images/FibSpiral1.jpeg);background-size: cover;background-repeat: repeat-x;
+        background-position: center;        
+}
+
+a,a:link,a:visited,a:active{ text-decoration: none;  cursor: pointer; color: blue;}
+a:hover{color: green;}
+
+label{font-size: 12px; font-weight: bold; color: #555555;}
+
+thead{ background-color: #FFFFFF; text-align: center;color: blue;padding: 5px;   margin: auto;    }
+
+h1 {font-size:230%;margin-top:0px;font-weight:normal}
+h2 {font-size:200%;margin-top:10px;margin-bottom:10px;font-weight:normal}
+h3 {font-size:180%;font-weight:normal}
+h4 {font-size:140%;}
+h5 {font-size:120%;}
+h6 {font-size:100%;}
+
+input,textarea, select{ border:1px solid #555555; border-radius: 5px; padding-left: 5px; height:20px; margin: 3px; box-shadow: #333333 2px;}
+
+
+.button.primary,.minibutton.primary{color:#fff;text-shadow:0 -1px 0 rgba(0,0,0,0.25);background-color:#60b044;background-image:-moz-linear-gradient(#8add6d, #60b044);background-image:-webkit-linear-gradient(#8add6d, #60b044);background-image:linear-gradient(#8add6d, #60b044);background-repeat:repeat-x;border-color:#5ca941}
+.button.primary:hover,.minibutton.primary:hover{color:#fff;background-color:#569e3d;background-image:-moz-linear-gradient(#79d858, #569e3d);background-image:-webkit-linear-gradient(#79d858, #569e3d);background-image:linear-gradient(#79d858, #569e3d);background-repeat:repeat-x;border-color:#4a993e}
+.button.primary:active,.button.primary.selected,.minibutton.primary:active,.minibutton.primary.selected{background-color:#569e3d;background-image:none;border-color:#418737}.button.primary:disabled,.button.primary:disabled:hover,.button.primary.disabled,.button.primary.disabled:hover,.minibutton.primary:disabled,.minibutton.primary:disabled:hover,.minibutton.primary.disabled,.minibutton.primary.disabled:hover{color:#fff;text-shadow:0 -1px 0 rgba(0,0,0,0.25);background-color:#60b044;background-image:-moz-linear-gradient(#8add6d, #60b044);background-image:-webkit-linear-gradient(#8add6d, #60b044);background-image:linear-gradient(#8add6d, #60b044);background-repeat:repeat-x;border-color:#74bb5a #74bb5a #509338}
+
+input[type=file]{    color: #888888; font-size: 15px;   height:20px;padding: 4px;   }
+
+input[type=button],.btnMain{
+    color: #444444; font-size: 10px;   height:25px;padding: 3px;  background-color: #61A220;
+    padding-left: 10px; padding-right: 10px;
+}
+input[type=button]:hover, .btnMain:hover{  background-color:#009933;}
+
+
+
+
+.flashCard{ border-collapse: collapse; height:310px;border: 1px solid green;border-radius: 10px;
+    margin: auto;font-size: 20px;text-align: center;width: 500px;
+}
+
+p.caption{ padding:2px; margin-top: -20px; margin-left: 10px;background-color: green;cursor: pointer;padding-left: 4px;
+         color: white; font-size: 12px; width: 200px; line-height: 18px; font-weight: bold; border-radius: 2px;}
+
+.divSelect{ padding:5px; font-size: 10px;font-weight: bold;display:none; margin-top: 28px; }
+
+.divSelectOptions{position: absolute;z-index: 10;
+    border: 1px solid green; display:none;
+    background-color: #009933;color: #666666;
+     box-shadow: 0px 0px 1px 2px #888888;min-width: 600px;
+}
+
+ #divCover{position:absolute;display: none; z-index: 3;  background-color: #555555; opacity: 0.80; margin: 0px; padding: 0px; top: 0; left: 0;bottom: 0; right: 0;
+ }
+
+
+
+table.tblLogin,.rounded{
+    transform:rotate( 45deg);
+    border-radius: 5px;width: 300px;
+    border: 1px solid #888888;
+    padding: 5px;
+    text-align: center;
+}
+
+        /*    .QEditDiv{
+                display: none;position: fixed;width: 700px;border: 1px solid green;padding: 10px;
+                z-index: 12;  
+            }
+            #previewQText{color:#666666; display: block;padding: 10px;font: normal 16px/20px sans-serif;
+                          background-color: #EEEEEE;border: 1px solid #DDDDDD;}
+            #btnClose{position: absolute; top: 4px; right: 4px;width: 20px;}
+            
+            .spanAns{display: block; font:normal 16px/24px sans-serif; padding-left: 10px; 
+                    margin: 2px; color: #666666;background-color: #DDDDDD;}
+            
+            .qFigBox{position: absolute; right:0px; top:0px;width: auto;height:auto;padding: 5px;
+                     border: 4px solid #DDDDDD;z-index: 5; background-color: #DDDDDD;box-shadow: -1px -1px 2px 0px #999999;}
+            
+            .divQBox{background-image: url(./images/greenBG5.jpeg); margin: 15px;
+                     padding: 10px; box-shadow: 0px 0px 1px 0px #888888;}
+            
+            .spanQInfo{
+            display: block;     font: 16px/24px sans-serif;       color: #666666;
+            }
+            
+            .spanFigEnlarged:hover{display:block; top:-300px; left:-200px;}
+            
+            .thumbQFig{ position:relative; width:80px;margin: 0px; }
+            .thumbQFig:hover{ width:auto;height:auto; max-width: 600px; max-height: 360px;top:0px; right:0px;}
+            
+            .largeQFig{ max-height:200px;max-width:200px;margin: 0 auto; }*/
+            
+            .QEditDiv{
+                display: none;position: fixed;width: 700px;border: 1px solid green;padding: 10px;
+                z-index: 12;  
+            }
+            #previewQText{color:#666666; display: block;padding: 10px;font: normal 16px/20px sans-serif;
+                          background-color: #EEEEEE;border: 1px solid #DDDDDD;}
+            #btnClose{position: absolute; top: 4px; right: 4px;width: 20px;}
+            
+            .spanAns{display: block; font:normal 16px/24px sans-serif; padding-left: 10px; 
+                    margin: 2px; color: #666666;background-color: #DDDDDD;}
+            
+            .figCaption{display: block; font:normal 16px/24px sans-serif; padding-left: 10px; 
+                    margin: 2px; color: #666666;}   
+            
+            .spanCorrAns{display: block; font:normal 16px/24px sans-serif; padding-left: 10px; 
+                    margin: 2px; color: #444444;}
+            
+            .qFigBox{position: absolute; left:300px; top:0px;width: auto;height:auto;
+                     border: 4px solid #DDDDDD;z-index: 5; background-color: #DDDDDD;}    
+            
+            .divQBox{background-image: url(./images/greenBG5.jpeg);text-align: left;
+                     padding: 10px;margin: 15px; box-shadow: 0px 0px 0px 1px #888888;}
+            
+
+            .divFixedBox{ display:inline-block; background-color: #5ca941;
+                          font:normal  14px sans-serif;padding: 5px;margin: 2px; 
+                     position: fixed; bottom: 0px; left: 0px;  border: 1px solid #DDDDDD;z-index: 20;}
+            
+            .spanFigEnlarged:hover{display:block; top:-300px; left:-200px;}
+            
+            .thumbQFig{ position:relative; width:auto;height:auto; max-width: 200px; max-height: 120px;margin: 0px; }
+            .thumbQFig:hover{ width:auto;height:auto; max-width: 500px; max-height: 400px;}
+            
+            .largeQFig{ max-height:200px;max-width:200px;margin: 0 auto; }
+
+#btnNext,#btnPrev{width: 50px;}
+
+#qCellTest,#ansCellTest {background-color: #EEEEEE;
+    padding:5px; ;color: #444444;
+    text-align: left;vertical-align: top;font-size: 20px; line-height: 28px;
+}
+
+#qCellFC,#ansCellFC {background-color: lightseagreen;
+    padding:5px; ;color: #444444;
+    text-align: left;vertical-align: top;font-size: 20px; line-height: 28px;
+}
+#qListAccordion{   
+    padding: 5px;
+    text-align: left;
+    color: yellow;  
+    font-size:14px;
+    width: 100%;       
+    opacity:0.90; 
+    border:2px; border-color:#FFFF11; 
+    text-align:left; vertical-align: top; 	
+    -moz-border-radius: 10px;-webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;  border-radius: 10px; border-width: 1px;
+}
+#QEntryTbl,#QEntryDiv,#QEditDiv{ background-color:#E3E3DE;  
+            color: #444444;    
+            font-size: 10px ;
+            font-weight: bold;
+            padding: 5px;
+            text-align: left;
+            -moz-border-radius: 10px;-webkit-border-radius: 10px;
+            -khtml-border-radius: 10px;  border-radius: 10px;
+            box-shadow:  1px 1px 1px 2px #AAAAAA ;
+}
+
+
+#tblLeftMenu,#divLeftMenu{
+    margin-left: 20pt;
+    width: 270px;
+    text-align: center;vertical-align: top;
+    border: 1px solid green;float:left;
+    padding:10px;    
+}
+
+.allUserMenu{display: none;}
+
+#helpMessage{
+    position:absolute;right: -10px;top: -20px;
+              padding: 5px;
+              z-index: 10; width: 300px;display: none;
+}
+
+#userOptions{position:absolute;margin-top: 5px;
+              padding: 5px;
+              width: 90%; display: none; z-index: 10; text-align: left;}
+#userSetup{
+    position: absolute;right: 10px;
+    padding: 5px;
+    background-color:white; border: 1px solid #CCCCCC; 
+    width: 120px;
+    display: none; z-index: 10;
+}
+#userHelp{
+    position: absolute;right: 10px;
+    padding: 5px; z-index: 10;
+    background-color:white; border: 1px solid #CCCCCC; 
+    width: 320px;
+    display: none;
+}
+
+
+.outerDiv1{
+    text-align: center; background-image:url(./images/bgGreenDiscoCircles.jpg);
+}
+
+.footer_main{background-color: #61A220;color: white;position: relative;bottom: 0px; left: 0px;height: 50px;}
+
+#bannerGame2Learn{
+    text-align: left; padding:2px; padding-left: 10px;background-color:  
+        rgba(97,162,32,1.0); color:#FFFFFF;vertical-align:middle;
+     }
+
+#bannerGame2Learn2{
+    text-align: left; padding:2px; padding-left: 10px; background-color:#88A500; color:#FFFFFF;vertical-align:middle;vertical-align: middle;
+    font: 25px/30px cursive;}
+
+#gameMenuBar{
+    font-size: 12px;font-weight: bold;
+    text-align: right; padding:2px;background-color: #222222;color:white;vertical-align:middle;
+}
+#tblMenuBar{ width: 100%;vertical-align: middle;background-color: #61A220;}
+
+a.btnLinkS,a.btnLinkM,a.btnLinkL,a.btnLinkXL,a.btnLinkXXL,a.btnLinkS:hover,a.btnLinkM:hover,a.btnLinkL:hover,
+a.btnLinkXL:hover,a.btnLinkXXL:hover{  display:inline-table;   border: 1px solid #BBBBBB;    color: #CCCCCC;
+    cursor: pointer;    text-decoration: none;    width: 100px;    background-color: #8AC007;
+    padding: 2px;padding-left: 10px;    margin: 1px;background-image:-webkit-linear-gradient(left, green, #88A500);
+}
+a.btnLinkS,a.btnLinkS:hover{font-size: 10px;line-height: 16px}
+a.btnLinkM,a.btnLinkM:hover{font-size: 12px;line-height: 18px}
+a.btnLinkL,a.btnLinkL:hover{font-size: 14px;line-height: 20px}
+a.btnLinkXL,a.btnLinkXL:hover{font-size: 16px;line-height: 22px}
+a.btnLinkXXL,a.btnLinkXXL:hover{font-size: 18px;line-height: 24px}
+
+a.btnLinkS:hover,a.btnLinkM:hover,a.btnLinkL:hover,a.btnLinkXL:hover,a.btnLinkXXL:hover{
+    color:#CCCCCC;background-color: green;background-image:-webkit-linear-gradient(left, #88A500,green);}
+
+a.mainLink{    text-align: left;    display:inline-table;    font:  16px/30px sans-serif;  
+               height:30px; text-spacing: ideograph-alpha;
+    color: #555555;    cursor: pointer;    text-decoration: none;    width: 250px;    background-color: #CCCCCC;
+    padding: 2px;padding-left: 20px; margin-top: 1px; 
+}
+a.mainLink:hover{ background-color: #61A220;}
+
+
+a.miniLink2:hover{    cursor: pointer;    font: bold 10px/16px sans-serif;    color: #DDDDDD;    background-color:teal;}
+
+a.miniLink2{
+    display:inline-table;
+    cursor: pointer;
+    font: bold 10px/16px sans-serif;
+    color: #8AC007;
+    background-color: inherit;
+    border: 1px;
+    height:20px;
+    background-color:#DDDDDD;  width: 110px;
+    padding-left: 5px;margin:2px;
+    border:1px solid #999999;
+}
+
+a.miniLink,a.miniLink:link,a.miniLink:visited,a.showbtn,a.showbtn:link,a.showbtn:visited,.miniLink
+{
+    display:inline-table;    color:#FFFFFF;    background-color:#8AC007;    width: 100px;    font-size:12px;font-weight: normal;
+    text-align:center;    padding-left:10px;    padding-right:10px;    padding-top:1px;    padding-bottom:1px;
+    text-decoration:none;      margin-bottom:1px;    border:1px solid #aaaaaa;
+     white-space:nowrap; height: 14px;}
+
+a.miniLink:hover,a.miniLink:active,a.showbtn:hover,a.showbtn:active
+{
+    background-color:#ffffff;color:#8AC007;
+}
+
+
+select{
+    font-weight: bold;
+    height:25px;
+    width:100px;
+    border:1px solid; border-color:#000055;
+}
+.radio1{
+    font-size:14px;
+    font-weight: bold;
+    height:20px;
+    width:20px;
+    border:1px solid; border-color:#000055;
+}
+input.ip1{ 
+    font:14px bold;
+    height:25px;
+    width:200px;
+    border:1px solid; border-color:green;
+}
+input.ip2{ 
+    font:14px bold;
+    height:25px;
+    width:100px;
+    border:1px solid; border-color:green;
+}
+
+input[name^=ans]{ 
+    font:14px bold;
+    height:25px;
+    width:150px;
+    border:1px solid; border-color:green;
+}
+
+.btnMacro1{
+    font-size:14px;
+    font-weight: bold;
+    width:40px;
+    border:1px solid;
+}
+
+
+.macroBtn1:hover{
+    font: 11px bold;
+    width:40px;
+    color:green;
+}
+.btnMain, .btnMain:hover{
+    background-color: #8AC007;
+    color:#8AC007;
+    font-size:11px;
+    font-weight: bold;
+    height:30px;
+    width:150px;
+    border-bottom: 2px solid; border-right:2px solid; 
+    border-radius: 5px;
+}
+.btnMain:hover{ background-color: #009933; color:white;}
+
+#editQ,#editQ:hover{
+    background-color: #8AC007;
+    color:white;
+    font-size:11px;
+    font-weight: bold;
+    height:30px;
+    width:50px;
+    border-bottom: 2px solid; border-right:2px solid; 
+    border-radius: 5px;
+}
+#editQ:hover{ background-color: #009933; color:white;}
+
+
+div.coverToGrayOut{ /*This is not working*/
+    width: 100%;height:100%;
+    background-color: #888888; 
+    position: absolute; 
+    left: 0px; 
+    top: 0px;
+    opacity:0.75;
+    z-index: 9;
+}
+
+#coverToGrayOut { 
+                  background-color: #888888; 
+                  position: absolute; 
+                  left: 0px; 
+                  top: 0px;
+                  opacity:0.75;
+                  z-index: 9;
+}
+
+.btn-image{height:25px;}
+.qInsBox{   
+    padding: 5px;
+    text-align: left;
+    color: yellow;  
+    font-size:14px;
+    width: 100%;       
+    opacity:0.90; 
+    border:2px; border-color:#FFFF11; 
+    text-align:left; vertical-align: top; 	
+    -moz-border-radius: 10px;-webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;  border-radius: 10px; border-width: 1px;
+}
+
+
+.qTbl2{
+    color: #333333;    
+    font: 10px bold;
+    width: 500px;
+    padding-left: 10px;      
+    border:1px #666666;
+
+}
+
+.qBox2{ 
+    color: red;  
+    font:10px bold  Palatino, serif;
+    width: 250px;
+    height: 200px; 
+    visibility:hidden; 
+    position:absolute;
+    z-index:2;opacity:0.90; 
+    border:2px; border-color:#000000; background:url(./images/bgTD.jpeg);
+    text-align:left; vertical-align: top; 	-moz-border-radius: 10px;-webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;  border-radius: 10px; border-width: 1px;
+}
+
+.qBox{ 
+    color:#FFFFFF;
+    font: 10px bold  Palatino, serif;
+    width: 250px;
+    height: 200px; 
+    visibility:hidden; 
+    position:absolute;
+    z-index:2;opacity:0.90; 
+    border:2px; border-color:#000000; background: #333333;
+    text-align:left; vertical-align: top; 	-moz-border-radius: 10px;-webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;  border-radius: 10px; border-width: 1px;
+}
+.accoContent{ 
+    color:#444444;width:90%;
+    margin-left: 0px;
+    margin-top: -3px;
+    padding-left: 5px;
+    padding-top:2px;
+    font: 12px bold ;
+    height:150px;
+    border:1px solid; border-color:#AAAAAA; background: #EEEEEE;
+    border-radius: 10px; border-width: 1px;
+}  
+
+.tblQList{ 
+    color:#222222;width:800px;;border: 1px solid green;
+    margin:auto;
+    padding: 2px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px; line-height: 20px;     
+}  
+
+td.menu{ 
+    background:url(./images/button.gif); 
+    height:30px; 
+    background-color: rgb(10,10,10);
+    font-family: Arial;  
+    font-size: 12px;  
+    color: #FFFFFF;  
+    text-decoration: none;   
+    font-weight: bold;   
+    text-align: center; 
+    cursor: pointer;
+}
+
+.GameTD0{ text-align:center; vertical-align: middle; background-color: #ffffff;border: 1px solid red ; width: 160px; height: 90px;}
+.GameTD1{ text-align:center; vertical-align: middle; background-color: rgb(0,0,100); border:solid red  1px; width: 160px; height: 90px;}
+.GameTD2{ text-align:center; vertical-align: middle; background-color: rgb(0,100,100); border: solid red  1px; width: 160px; height: 90px;  }
+.GameTD3{ text-align:center; vertical-align: middle; background-color: rgb(0,100,0); border: solid red  1px; width: 160px; height: 90px;  }
+.GameTD4{  text-align:center; vertical-align: middle; background-color: rgb(100,100,0); border: solid red  1px; width: 160px; height: 90px;  }
+.GameTD5{ text-align:center; vertical-align: middle; background-color: rgb(100,0,0); border: solid red  1px; width: 160px; height: 90px;  }
+
+div.panel,div.flip
+{
+    padding:5px;
+    text-align:left;
+    vertical-align: top;
+    background-color:#e5eecc;
+    border:solid 1px #c3c3c3;
+}
+div.panel
+{
+    padding:10px;
+    display:none;
+}
+
+.infoBoxOuterDiv{
+    visibility: hidden;z-index: -5; position:absolute;width: 400px;height: 200px; padding:10px;
+    background-color: #CCCCCC; border:1px #444444 solid ;
+}
+#instructionBox{
+    position:absolute;top:0;left:0; width: 440px;height: 300px; padding:10px;
+    font:12px red bold ;color: #444444;
+    background-color: #DDDDDD; border:1px #444444 solid ;
+}
+
+.coverDiv{
+    visibility: visible; position: absolute;top:0;left:0; background-color: #AAAAAA;opacity: 0.75;z-index: -2;
+}
+
+.editQBox{
+    position:absolute; padding:10px;
+    color: #444444;z-index: 12;
+    background-color: #DDDDDD; border:1px #444444 solid ;
+}

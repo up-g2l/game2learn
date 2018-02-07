@@ -1,0 +1,28 @@
+/* 
+    Document   : fig_upload
+    Created on : Jul 31, 2014, 11:03:15 PM
+    Author     : upendraprasad
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+
+#divFigContainer  th{color:#DDDDDD;}
+#divFigContainer  td{margin:1px; padding: 4px;background-color:#EEEEEE; min-width: 20px; 
+   white-space: nowrap; color: #666666;
+   text-overflow: ellipsis;min-height: 30px;}
+#divFigContainer  td:nth-child(3){text-align: center;}
+#editFigBox{width:800px; margin: auto;background: rgba(194,231,194,1);display: table; 
+            padding: 10px;}
+#popHeader{padding:5px; margin:0; background-color:#008800;color:#DDDDDD; padding-left: 6px;font-size: 14px;font-weight: bold;}
+#divFigMsg{color:#1768a4; font-size: 14px;font-weight: bold;text-align: center;}
+#divLinkContainer{display:none}
+.imgThumbUploaded{height: 50px;max-width: 200px;cursor: pointer;border: 2px solid #AAAAAA;}
+.imgThumbUploaded:hover{border: 2px solid green;}
+.pop1Content{ border:1px solid green; padding:10px;min-height:260px;}
+.spanFigDesc{display: block;background-color: #DDDDDD;margin-bottom: 1px;}
+

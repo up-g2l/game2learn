@@ -1,0 +1,89 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet"  type="text/css" href="../g2l_spring.css">
+  <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+        <title>g2l: Login</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+     <script>
+     function  goLogin(){
+         //$('#mainForm').attr('action','/g2l/login/authenticate.jsp');
+         //document.forms.submit();
+        // form[0].submit();
+     }
+        
+    </script>
+    </head>
+
+    <body>
+        
+    <!--<div id="gameMenuBar"  >  
+        <table border="0" width="100%">
+               <tbody>
+                   <tr><td style="width:85%"></td><td style="width:0%"></td><td style="width:0%"></td><td style="width:0%"></td><td style="width:0%"></td><td style="width:0%"></td>
+                       <td style=""><a  class="miniLink" >&diams; Upendra Prasad &diams;</a></td>
+                   </tr>
+               </tbody>
+           </table>
+        </div>-->
+            <div id="bannerGame2Learn" >g2l:Login</div>
+     <div id="outerDiv1" style="text-align: center;" align="center">
+       <table id="outerTbl1" width="90%"><tr><td style="width:100%"></td>
+          <td style="width:250px"> 
+              <br><br>
+              <form name="loginForm" action="../authenticate"  >
+            <table class="tblLogin" width="300px">
+                <thead>
+                    <tr>
+                        <th> Login </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                 <td> 
+                     <p> Please provide you login info.</p>
+                     <input type="hidden" name="queryType" id="queryType"/><br/>
+                            <label for="userId"> User id <input type="text" id="userId" name="userId" value=""  /></label><br/>
+                            <label for="userPass">Password <input type="password" id="userPass" name="userPass" value="" /></label><br/>
+                            <input type="button" id="btnLogin" value="Login" onclick=" $('#queryType').val('login'); submit();" /><br><br>
+                        
+
+                    <a onclick="$('#newUserSignUp').toggle();">New User?</a><br/>
+                         <div id="newUserSignUp" style="display: none;">
+                                <label for="userName"> Name <input type="text" name="userName" id="userName" value=""  /></label><br/>
+                                <label for="userId2"> User id <input type="text" name="userId2" id="userId2" value=""  /></label><br/>
+                                <label for="userPass2">Password <input type="password" name="userPass2"  id="userPass2"  value="" /></label><br/>
+                                <label for="userPass22">Password Again<input type="password" name="userPass22"  id="userPass22"  value="" /></label><br/>
+                                <label for="userQ1">Enter a  secret question <input type="text" id="userQ1" name="userQ1" value="" /></label><br/>
+                                <label for="userAns1">Answer to the secret question <input type="text" name="userAns1"  id="userAns1"  value="" /></label><br/>
+                                <input type="button" id="btnNewUser" value="Sign up"  onclick=" $('#queryType').val('signup'); submit();"  /><br>
+               
+                         </div><br/>
+                    <a onclick="$('#forgotPass').toggle();" >Forgot Password?</a><br/>
+                    <div id="forgotPass" style="display: none;">
+  
+                                <label for="userId3"> User id <input type="text" name="userId3" value=""   id="userId3"  /></label><br/>
+                                <label for="userPass3">Answer to Secret Question <input type="password" name="userPass3"  id="userPass3"  value="" /></label><br/>
+                                <input type="button" id="btnForgotPass" value="Submit"  onclick=" $('#queryType').val('forgotPass'); submit();"  />
+                         </div>
+                   </td>      
+             </tr>
+         </tbody>
+     </table>
+    </form>
+
+    </td>
+    </tr>
+    </table>
+    </div>
+    </body>
+</html>
